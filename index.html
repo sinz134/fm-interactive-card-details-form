@@ -1,51 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Interactive card details form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+      background-image: url("images/bg-main-desktop.png");
+      background-repeat: no-repeat;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0%);
+    }
+
+    .attribution a {
+      color: black;
+    }
+
+    .detail-form {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: 20vw;
+      top: 35vh;
+      width: 25vw;
+    }
+
+    input {
+      margin-top: 0.8vh;
+      margin-bottom: 2vh;
+    }
+
+    .card-front {
+      position: absolute;
+      top: 20vh;
+      left: 13vw;
+      width: 400px;
+      height: 200px;
+    }
+
+    .card-back {
+      position: absolute;
+      top: 50vh;
+      left: 18vw;
+      width: 400px;
+      height: 200px;
+    }
+
+    .card-front>img,
+    .card-back>img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .card-detail {
+      color: white;
+      z-index: 10;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   </style>
 </head>
+
 <body>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+  <div class="container">
 
-  000
+    <div class="card-front">
+      <img src="./images/bg-card-front.png" alt="">
+      <div class="card-detail">
+        0000 0000 0000 0000
+        Jane Appleseed
+        00/00
+        000
+      </div>
+    </div>
 
-  Cardholder Name
-  e.g. Jane Appleseed
+    <div class="card-back">
+      <img src="./images/bg-card-back.png" alt="">
+    </div>
 
-  Card Number
-  e.g. 1234 5678 9123 0000
+    <div class="detail-form">
+      <form>
+        <div>
+          <label> Cardholder Name</label>
+        </div>
+        <div>
+          <input type="text" id="cname" name="cardname" placeholder="e.g. Jane Appleseed">
+        </div>
+        <div>
+          <label> Card Number</label>
+        </div>
+        <div>
+          <input type="text" id="cnumber" name="cardnumber" placeholder="e.g. 1234 5678 9123 0000">
+        </div>
+        <div>
+          <label> Exp. Date (MM/YY)</label>
+          <label>CVC</label>
+        </div>
+        <div>
+          <input type="number" id="expmonth" name="expmonth" placeholder="MM">
+          <input type="number" id="expyear" name="expyear" placeholder="YY">
+          <input type="number" id="cvc" name="cvc" placeholder="e.g. 123">
+        </div>
+        <div>
+          <input type="submit" value="Confirm">
+        </div>
+      </form>
 
-  Exp. Date (MM/YY)
-  MM
-  YY
 
-  CVC
-  e.g. 123
+    </div>
 
-  Confirm
 
-  <!-- Completed state start -->
+    <!-- Completed state start -->
 
-  Thank you!
-  We've added your card details
-  Continue
-  
+    <!-- Thank you!
+    We've added your card details
+    Continue -->
+  </div>
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by Sinz.
   </div>
 </body>
+
 </html>
